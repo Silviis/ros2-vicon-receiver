@@ -8,9 +8,9 @@ This is NOT an official ROS2 package and is not supported. The package has been 
 
 ### Installation of dependencies
 
-If you are using Ubuntu 18.04 Bionic Beaver, you can install all the dependencies by simply `cd`'ing into the main project folder and then running
+If you are using Ubuntu 22.04 Jammy Jellyfish, you can install all the dependencies by simply `cd`'ing into the main project folder and then running
 ```
-$ ./install_ubuntu_bionic.sh
+$ ./install_ubuntu_jammy.sh
 ```
 
 Otherwise, proceed as follows. Make sure you have ROS2 installed (follow the instructions at the [ROS2 website](https://index.ros.org/doc/ros2/Installation/)).
