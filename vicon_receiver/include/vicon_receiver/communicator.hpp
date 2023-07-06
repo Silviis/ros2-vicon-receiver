@@ -3,6 +3,9 @@
 
 #include "DataStreamClient.h"
 #include "rclcpp/rclcpp.hpp"
+#include "geometry_msgs/msg/transform_stamped.hpp"
+#include "tf2/LinearMath/Quaternion.h"
+#include "tf2_ros/transform_broadcaster.h"
 #include "publisher.hpp"
 #include <iostream>
 #include <map>
@@ -23,6 +26,9 @@ private:
     string ns_name;
     map<string, Publisher> pub_map;
     boost::mutex mutex;
+    std::unique_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
+
+    void publish_tf(PositionStruct p);
 
 public:
     Communicator();
